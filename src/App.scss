@@ -1,2 +1,8 @@
-@import "styles/_test.scss"; // assuming a styles directory under src/
-// @import "nprogress/nprogress"; // importing a css file from the nprogress node module
+/**
+ * CSS pre-processing taken from create-react-app docs
+ * @import "./path/to/scss" 
+ * or for node_modules
+ * @import "nprogress/nprogress";
+ */
+
+@import "./styles/_main.scss";
