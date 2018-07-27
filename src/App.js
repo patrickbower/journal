@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
-import Contents from "./components/Contents";
+import ContentsContainer from "./containers/ContentsContainer";
 import "./App.css";
 import DummyData from "./dummy.json";
 
@@ -46,7 +46,7 @@ class App extends Component {
     // Create timestamp and time formats for each card
     data.forEach(card => {
       const { dateLastActivity } = card;
-      card.timestamp = Date.parse(dateLastActivity);
+      card.timeStamp = Date.parse(dateLastActivity);
       card.dateYear = new Date(dateLastActivity).getFullYear();
       card.dateMonth = Months[new Date(dateLastActivity).getMonth()];
       card.dateWeekday = Days[new Date(dateLastActivity).getDay()];
@@ -72,7 +72,7 @@ class App extends Component {
                 exact
                 path="/"
                 render={routeProps => (
-                  <Contents data={this.state.initialDataSet} />
+                  <ContentsContainer data={this.state.initialDataSet} />
                 )}
               />
               <Route path="/about" render={() => <h1>About</h1>} />
