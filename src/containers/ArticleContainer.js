@@ -14,6 +14,7 @@ const ArticleContainer = ({ data }) => {
     });
     return match.pop();
   };
+
   /**
    * @return
    * Render Article that matches the id in the url hash
