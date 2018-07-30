@@ -65,21 +65,19 @@ class App extends Component {
   render() {
     if (this.state.initialDataSet) {
       return (
-        <React.Fragment>
-          <Router>
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={routeProps => (
-                  <ContentsContainer data={this.state.initialDataSet} />
-                )}
-              />
-              <Route path="/about" render={() => <h1>About</h1>} />
-              <Route render={() => <h1>404</h1>} />
-            </Switch>
-          </Router>
-        </React.Fragment>
+        <Router>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={routeProps => (
+                <ContentsContainer data={this.state.initialDataSet} />
+              )}
+            />
+            <Route path="/about" render={() => <h1>About</h1>} />
+            <Route render={() => <h1>404</h1>} />
+          </Switch>
+        </Router>
       );
     } else {
       return <h1>Loading...</h1>;

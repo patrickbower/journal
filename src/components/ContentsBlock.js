@@ -1,33 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import ContentsMonth from "./ContentsMonth";
 
-class ContentsBlock extends Component {
-  generateEntriesBlock(entries) {
-    return entries.map(entry => {
-      return <li key={entry.id}>{entry.name}</li>;
-    });
-  }
-
-  generateMonthBlock() {
-    const { data } = this.props;
-    return data.months.map((month, index) => {
-      return (
-        <React.Fragment key={index}>
-          <h2>{month.monthName}</h2>
-          <ul>{this.generateEntriesBlock(month.entries)}</ul>
-        </React.Fragment>
-      );
-    });
-  }
-
-  render() {
-    const { data } = this.props;
-    return (
-      <div className="content-block">
-        <h1>{data.year}</h1>
-        {this.generateMonthBlock()}
-      </div>
-    );
-  }
+/**
+ * @function ContentsBlock
+ * @param {object} data - complete dataset
+ */
+function generateMonthBlock(data) {
+  return data.months.map((month, index) => {
+    return <ContentsMonth key={index} month={month} />;
+  });
 }
+
+/**
+ * @function ContentsBlock
+ * @param {object} data - complete dataset
+ */
+const ContentsBlock = ({ data }) => (
+  <section className="content-block">
+    <h2>{data.year}</h2>
+    {generateMonthBlock(data)}
+  </section>
+);
 
 export default ContentsBlock;

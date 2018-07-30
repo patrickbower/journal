@@ -1,9 +1,19 @@
-import React, { Component } from "react";
-import ContentsBlock from "../components/ContentsBlock";
+import React from "react";
+import Contents from "../components/Contents";
 
-class ContentsContainer extends Component {
-  splitYears() {
-    const { data } = this.props;
+/**
+ * @function ContentsContainer
+ * Reconstruct data modal for faster, cleaner and
+ * easier use throughout life-cycles.
+ *
+ * @param {object} data - cards dataset
+ */
+const ContentsContainer = ({ data }) => {
+  /**
+   * @function splitYears
+   * Get unique years and create a new model for each
+   */
+  const splitYears = () => {
     const years = [...new Set(data.map(card => card.dateYear))];
 
     const yearsArray = years.map(year => {
@@ -15,9 +25,15 @@ class ContentsContainer extends Component {
       return yearEntries;
     });
     return yearsArray;
-  }
+  };
 
-  splitMonths(entries) {
+  /**
+   * @function splitMonths
+   * Get unique months and create a new model for each
+   *
+   * @param {array} entries
+   */
+  const splitMonths = entries => {
     const months = [...new Set(entries.map(entry => entry.dateMonth))];
 
     const monthsArray = months.map(month => {
@@ -30,23 +46,28 @@ class ContentsContainer extends Component {
     });
 
     return monthsArray;
-  }
+  };
 
-  generateDataSet() {
-    const yearsArray = this.splitYears();
+  /**
+   * @function generateDataSet
+   * Construct new data modal using entries and remove preexisting
+   */
+  const generateDataSet = () => {
+    const yearsArray = splitYears();
     return yearsArray.map(year => {
-      year.months = this.splitMonths(year.entries);
+      year.months = splitMonths(year.entries);
       delete year.entries;
       return year;
     });
-  }
+  };
 
-  render() {
-    const data = this.generateDataSet();
-    return data.map((year, index) => {
-      return <ContentsBlock data={year} key={index} />;
-    });
-  }
-}
+  /**
+   * @return
+   * Render block for each year
+   */
+  return generateDataSet().map((year, index) => {
+    return <Contents data={year} key={index} />;
+  });
+};
 
 export default ContentsContainer;
