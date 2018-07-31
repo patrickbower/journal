@@ -1,3 +1,3 @@
-# journal
+# Journal
 
-Micro blogging site using React and Trello API
+Micro blogging site using React front-end with Trello back-end
