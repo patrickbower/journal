@@ -7,7 +7,15 @@ import ContentsItem from "./ContentsItem";
  */
 function generateEntriesBlock(entries) {
   return entries.map(entry => {
-    return <ContentsItem key={entry.id} name={entry.name} />;
+    const date = `${entry.dateWeekday} ${entry.dateDay}${entry.dateOrdinal}`;
+    return (
+      <ContentsItem
+        key={entry.id}
+        name={entry.name}
+        date={date}
+        id={entry.id}
+      />
+    );
   });
 }
 

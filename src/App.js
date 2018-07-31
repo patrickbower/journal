@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";
+import ArticleContainer from "./containers/ArticleContainer";
 import "./App.css";
 import DummyData from "./dummy.json";
 
@@ -28,8 +29,8 @@ class App extends Component {
     // Get cards from published column on Trello
     fetch("https://api.trello.com/1/lists/5b5758ff527896cec9992dd6/cards")
       .then(response => {
-        // return response.json();
-        return DummyData;
+        return response.json();
+        // return DummyData;
       })
       .then(data => {
         // Hydrate and set
@@ -74,7 +75,12 @@ class App extends Component {
                 <ContentsContainer data={this.state.initialDataSet} />
               )}
             />
-            <Route path="/about" render={() => <h1>About</h1>} />
+            <Route
+              path="/article"
+              render={routeProps => (
+                <ArticleContainer data={this.state.initialDataSet} />
+              )}
+            />
             <Route render={() => <h1>404</h1>} />
           </Switch>
         </Router>
