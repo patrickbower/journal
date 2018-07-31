@@ -4,7 +4,6 @@ import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";
 import ArticleContainer from "./containers/ArticleContainer";
 import "./App.css";
-import DummyData from "./dummy.json";
 
 class App extends Component {
   state = {
