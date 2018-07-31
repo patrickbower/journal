@@ -36,7 +36,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 1.414em 0 0.5em;
+  margin: var(--font-size-lg) 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
   font-weight: 500;
@@ -60,7 +60,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1.414em;
+  font-size: var(--font-size-lg);
 }
 
 small,
