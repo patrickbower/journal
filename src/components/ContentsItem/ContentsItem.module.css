@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.date {
+  color: blue;
+}

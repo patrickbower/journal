@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import style from "./ContentsItem.module.css";
 
 /**
  * @function ContentsItem
@@ -12,8 +13,9 @@ const ContentsItem = ({ name, date, id }) => (
         pathname: "/article",
         hash: `#${id}`
       }}
+      className={style.link}
     >
-      {name} <span style={{ display: "none" }}>{date}</span>
+      {name} <span className={style.date}>{date}</span>
     </Link>
   </li>
 );
