@@ -35,7 +35,8 @@ body {
   line-height: 1.45;
 }
 
-p {
+p,
+a {
   font-size: var(--font-size-body);
   margin-bottom: 1.3em;
 }

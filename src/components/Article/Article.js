@@ -1,6 +1,7 @@
 import React from "react";
 import showdown from "showdown";
 import { Link } from "react-router-dom";
+import style from "./Article.module.css";
 
 /**
  * @function Article
@@ -20,7 +21,7 @@ const Article = ({ data }) => (
     <article>
       <h1>{data.name}</h1>
       <div
-        className="markdown-body"
+        className={style.markdownBody}
         dangerouslySetInnerHTML={parseMD(data.desc)}
       />
     </article>
