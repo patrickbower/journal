@@ -1,7 +1,7 @@
 .heading {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-heading);
   text-align: right;
   /* minus line height above to align headings and 
   font size below for gap */
-  margin: -1.2em 0 var(--font-size-lg) 0;
+  margin: -1.2em 0 var(--font-size-heading) 0;
 }
