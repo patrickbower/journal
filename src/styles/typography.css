@@ -45,15 +45,14 @@ h1,
 h2,
 h3,
 h4 {
-  margin: var(--font-size-lg) 0 0.5em;
+  margin: 0 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
   font-weight: 500;
   font-size: var(--font-size-heading);
 }
 
-h1,
-.h1 {
+.title {
   margin-top: 0;
   font-size: var(--font-size-title);
 }
