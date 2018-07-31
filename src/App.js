@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";
 import ArticleContainer from "./containers/ArticleContainer";
-import "./App.css";
+import "./styles/variables.css";
+import "./styles/reset.css";
+import "./styles/typography.css";
+import "./styles/global.css";
 
 class App extends Component {
   state = {

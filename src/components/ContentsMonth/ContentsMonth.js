@@ -1,5 +1,6 @@
 import React from "react";
-import ContentsItem from "./ContentsItem/ContentsItem";
+import ContentsItem from "../ContentsItem/ContentsItem";
+import style from "./ContentsMonth.module.css";
 
 /**
  * @function generateEntriesBlock
@@ -25,8 +26,8 @@ function generateEntriesBlock(entries) {
  */
 const ContentsMonth = ({ month }) => (
   <React.Fragment>
-    <h3>{month.monthName}</h3>
-    <ul>{generateEntriesBlock(month.entries)}</ul>
+    <h3 className={style.heading}>{month.monthName}</h3>
+    <ul className="list-reset">{generateEntriesBlock(month.entries)}</ul>
   </React.Fragment>
 );
 

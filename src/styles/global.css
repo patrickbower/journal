@@ -1,0 +1,12 @@
+body {
+  background-color: var(--colour-stone);
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list-reset {
+  list-style: none;
+}
