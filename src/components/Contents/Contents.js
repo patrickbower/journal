@@ -1,5 +1,5 @@
 import React from "react";
-import ContentsBlock from "./ContentsBlock";
+import ContentsBlock from "../ContentsBlock/ContentsBlock";
 
 /**
  * @function Contents

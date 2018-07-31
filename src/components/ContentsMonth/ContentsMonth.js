@@ -1,5 +1,5 @@
 import React from "react";
-import ContentsItem from "./ContentsItem/ContentsItem";
+import ContentsItem from "../ContentsItem/ContentsItem";
 
 /**
  * @function generateEntriesBlock

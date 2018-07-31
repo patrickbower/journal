@@ -1,5 +1,5 @@
 import React from "react";
-import ContentsMonth from "./ContentsMonth";
+import ContentsMonth from "../ContentsMonth/ContentsMonth";
 
 /**
  * @function ContentsBlock
