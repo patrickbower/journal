@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment, Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";
 import ArticleContainer from "./containers/ArticleContainer";
+import Header from "./components/Header/Header";
 import "./styles/variables.css";
 import "./styles/reset.css";
 import "./styles/typography.css";
@@ -74,13 +75,19 @@ class App extends Component {
               exact
               path="/"
               render={routeProps => (
-                <ContentsContainer data={this.state.initialDataSet} />
+                <Fragment>
+                  <Header />
+                  <ContentsContainer data={this.state.initialDataSet} />
+                </Fragment>
               )}
             />
             <Route
               path="/article"
               render={routeProps => (
-                <ArticleContainer data={this.state.initialDataSet} />
+                <Fragment>
+                  <Header />
+                  <ArticleContainer data={this.state.initialDataSet} />
+                </Fragment>
               )}
             />
             <Route render={() => <h1>404</h1>} />
