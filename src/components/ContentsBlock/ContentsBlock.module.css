@@ -1,3 +1,10 @@
+/**
+ * TODO:
+ * The padding top to align main content between pages is not aligned and 
+ * is a poor means of alignment - fix using a two row grid system throughout
+ * and add a padding bottom bottom to the top row.
+ */
+
 .contentsBlock {
   padding-top: 260px;
 }

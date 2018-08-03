@@ -1,3 +1,13 @@
+/**
+ * TODO: header, main and nav alignment
+ *  
+ * Currently the items across the top of the page are aligned 
+ * using padding. These should all be aligned on the same baseline.
+ * 
+ * Currently the grid system won't support this as it's just three columns
+ * and will require two rows with three columns in.
+ */
+
 .page {
   display: grid;
   grid-template-columns: 200px 1fr 200px;

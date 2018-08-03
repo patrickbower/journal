@@ -105,6 +105,7 @@ class App extends Component {
                 </div>
               )}
             />
+            {/* TODO: Need a proper 404 component */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
         </Router>
