@@ -1,6 +1,7 @@
 import React from "react";
 import showdown from "showdown";
 import style from "./Article.module.css";
+import markdownStyles from "./Markdown.module.css";
 import ArticleInfo from "../ArticleInfo/ArticleInfo";
 
 /**
@@ -21,9 +22,9 @@ const Article = ({ data }) => (
     <div className={style.article}>
       <ArticleInfo data={data} />
       <article>
-        <h1>{data.name}</h1>
+        <h1 className={style.heading}>{data.name}</h1>
         <div
-          className={style.markdownBody}
+          className={markdownStyles.markdown}
           dangerouslySetInnerHTML={parseMD(data.desc)}
         />
       </article>
