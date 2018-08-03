@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";
 import ArticleContainer from "./containers/ArticleContainer";
+import LinkHome from "./components/LinkHome/LinkHome";
 import Header from "./components/Header/Header";
 import "./styles/variables.css";
 import "./styles/reset.css";
 import "./styles/typography.css";
 import "./styles/global.css";
+import style from "./App.module.css";
 
 class App extends Component {
   state = {
@@ -75,19 +77,31 @@ class App extends Component {
               exact
               path="/"
               render={routeProps => (
-                <Fragment>
-                  <Header />
-                  <ContentsContainer data={this.state.initialDataSet} />
-                </Fragment>
+                <div className={style.column}>
+                  <div className={style.header}>
+                    <Header />
+                  </div>
+                  <div className={style.main}>
+                    <ContentsContainer data={this.state.initialDataSet} />
+                  </div>
+                  <div className={style.nav} />
+                </div>
               )}
             />
             <Route
               path="/article"
               render={routeProps => (
-                <Fragment>
-                  <Header />
-                  <ArticleContainer data={this.state.initialDataSet} />
-                </Fragment>
+                <div className={style.column}>
+                  <div className={style.header}>
+                    <Header />
+                  </div>
+                  <div className={style.main}>
+                    <ArticleContainer data={this.state.initialDataSet} />
+                  </div>
+                  <div className={style.nav}>
+                    <LinkHome />
+                  </div>
+                </div>
               )}
             />
             <Route render={() => <h1>404</h1>} />

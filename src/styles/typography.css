@@ -39,6 +39,7 @@ p,
 a {
   font-size: var(--font-size-body);
   margin-bottom: 1.3em;
+  text-decoration: none;
 }
 
 h1,
