@@ -15,7 +15,8 @@ const ContentsItem = ({ name, date, id }) => (
       }}
       className={style.link}
     >
-      {name} <span className={style.date}>{date}</span>
+      <span className={style.name}>{name}</span>
+      <span className={style.date}>{date}</span>
     </Link>
   </li>
 );
