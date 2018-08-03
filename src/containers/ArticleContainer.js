@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Article from "../components/Article/Article";
+import StringToUrl from "../utils/string-to-url";
 
 /**
  * @function ArticleContainer
@@ -10,7 +11,8 @@ const ArticleContainer = ({ data }) => {
   const getArticle = () => {
     const hash = window.location.hash.substr(1);
     const match = data.filter(card => {
-      return card.id === hash;
+      const id = StringToUrl(card.name);
+      return id === hash;
     });
     return match.pop();
   };

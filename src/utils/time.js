@@ -1,3 +1,6 @@
+/**
+ * Help with converting timestamp into meaning full parts
+ */
 export const Days = [
   "Sunday",
   "Monday",
