@@ -1,3 +1,7 @@
+.contentsBlock {
+  padding-top: 200px;
+}
+
 .heading {
   font-size: var(--font-size-heading);
   margin: 0;

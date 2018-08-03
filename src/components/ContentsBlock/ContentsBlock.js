@@ -16,7 +16,7 @@ function generateMonthBlock(data) {
  * @param {object} data - complete dataset
  */
 const ContentsBlock = ({ data }) => (
-  <section className="content-block">
+  <section className={style.contentsBlock}>
     <h2 className={style.heading}>{data.year}</h2>
     {generateMonthBlock(data)}
   </section>

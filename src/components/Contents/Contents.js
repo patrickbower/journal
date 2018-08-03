@@ -1,5 +1,6 @@
 import React from "react";
 import ContentsBlock from "../ContentsBlock/ContentsBlock";
+import style from "./Contents.module.css";
 
 /**
  * @function Contents
@@ -9,7 +10,7 @@ import ContentsBlock from "../ContentsBlock/ContentsBlock";
  */
 const Contents = ({ data }) => (
   <main>
-    <article>
+    <article className={style.article}>
       <ContentsBlock data={data} />
     </article>
   </main>

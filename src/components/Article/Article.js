@@ -1,7 +1,7 @@
 import React from "react";
 import showdown from "showdown";
-import { Link } from "react-router-dom";
 import style from "./Article.module.css";
+import ArticleInfo from "../ArticleInfo/ArticleInfo";
 
 /**
  * @function Article
@@ -18,14 +18,14 @@ function parseMD(markdown) {
 
 const Article = ({ data }) => (
   <main>
-    <article>
+    <ArticleInfo data={data} />
+    <article className={style.article}>
       <h1>{data.name}</h1>
       <div
         className={style.markdownBody}
         dangerouslySetInnerHTML={parseMD(data.desc)}
       />
     </article>
-    <Link to="/">Home</Link>
   </main>
 );
 
