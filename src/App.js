@@ -77,7 +77,7 @@ class App extends Component {
               exact
               path="/"
               render={routeProps => (
-                <div className={style.column}>
+                <div className={style.page}>
                   <div className={style.header}>
                     <Header />
                   </div>
@@ -91,7 +91,7 @@ class App extends Component {
             <Route
               path="/article"
               render={routeProps => (
-                <div className={style.column}>
+                <div className={style.page}>
                   <div className={style.header}>
                     <Header />
                   </div>

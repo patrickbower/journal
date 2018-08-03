@@ -1,9 +1,10 @@
-.column {
+.page {
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   grid-gap: 20px;
   grid-template-areas: "header main nav";
   margin: 30px;
+  min-width: 260px;
 }
 
 .header {
@@ -20,11 +21,11 @@
 }
 
 @media only screen and (max-width: 760px) {
-  .column {
+  .page {
     grid-template-areas:
       "header nav"
       "main main";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     flex-direction: column;
     margin: 20px;
   }

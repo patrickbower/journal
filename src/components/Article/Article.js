@@ -1,6 +1,7 @@
 import React from "react";
 import showdown from "showdown";
 import style from "./Article.module.css";
+import markdownStyles from "./Markdown.module.css";
 import ArticleInfo from "../ArticleInfo/ArticleInfo";
 
 /**
@@ -17,15 +18,17 @@ function parseMD(markdown) {
 }
 
 const Article = ({ data }) => (
-  <main>
-    <ArticleInfo data={data} />
-    <article className={style.article}>
-      <h1>{data.name}</h1>
-      <div
-        className={style.markdownBody}
-        dangerouslySetInnerHTML={parseMD(data.desc)}
-      />
-    </article>
+  <main className={style.main}>
+    <div className={style.article}>
+      <ArticleInfo data={data} />
+      <article>
+        <h1 className={style.heading}>{data.name}</h1>
+        <div
+          className={markdownStyles.markdown}
+          dangerouslySetInnerHTML={parseMD(data.desc)}
+        />
+      </article>
+    </div>
   </main>
 );
 

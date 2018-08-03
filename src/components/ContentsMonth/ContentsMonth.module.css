@@ -2,6 +2,14 @@
   font-size: var(--font-size-heading);
   text-align: right;
   /* minus line height above to align headings and 
-  font size below for gap */
-  margin: -1.2em 0 var(--font-size-heading) 0;
+    font size below for gap */
+  margin: -1.2em 0 var(--font-size-heading);
+}
+
+.heading ~ .heading {
+  margin: 0 0 var(--font-size-heading);
+}
+
+.list {
+  margin-bottom: 60px;
 }

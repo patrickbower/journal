@@ -1,8 +1,14 @@
 .contentsBlock {
-  padding-top: 200px;
+  padding-top: 260px;
 }
 
 .heading {
   font-size: var(--font-size-heading);
   margin: 0;
+}
+
+@media only screen and (max-width: 760px) {
+  .contentsBlock {
+    padding-top: 100px;
+  }
 }
