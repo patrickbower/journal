@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import ContentsItem from "../ContentsItem/ContentsItem";
 import style from "./ContentsMonth.module.css";
+import StringToUrl from "../../utils/string-to-url";
 
 /**
  * @function generateEntriesBlock
@@ -14,7 +15,7 @@ function generateEntriesBlock(entries) {
         key={entry.id}
         name={entry.name}
         date={date}
-        id={entry.id}
+        id={StringToUrl(entry.name)}
       />
     );
   });

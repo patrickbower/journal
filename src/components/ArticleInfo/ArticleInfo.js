@@ -8,7 +8,6 @@ import style from "./ArticleInfo.module.css";
  */
 
 const ArticleInfo = props => {
-  console.log(props);
   return (
     <p className={style.infoText}>
       Published {props.data.dateDay}
