@@ -1,5 +1,16 @@
+.main {
+  display: grid;
+}
+
 .article {
+  justify-self: center;
+  width: 100%;
   max-width: 600px;
-  min-width: 320px;
-  margin: 0 auto;
+}
+
+@media only screen and (max-width: 760px) {
+  .article {
+    width: 100%;
+    min-width: 300px;
+  }
 }

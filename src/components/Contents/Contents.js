@@ -9,7 +9,7 @@ import style from "./Contents.module.css";
  * @param {array} data - dataset
  */
 const Contents = ({ data }) => (
-  <main>
+  <main className={style.main}>
     <article className={style.article}>
       <ContentsBlock data={data} />
     </article>
