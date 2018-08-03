@@ -11,8 +11,8 @@ const ArticleContainer = ({ data }) => {
   const getArticle = () => {
     const hash = window.location.hash.substr(1);
     const match = data.filter(card => {
-      const id = StringToUrl(card.name);
-      return id === hash;
+      const friendlyURL = StringToUrl(card.name);
+      return `${friendlyURL}-${card.id}` === hash;
     });
     return match.pop();
   };

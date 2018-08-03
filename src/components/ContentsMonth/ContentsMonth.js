@@ -10,12 +10,13 @@ import StringToUrl from "../../utils/string-to-url";
 function generateEntriesBlock(entries) {
   return entries.map(entry => {
     const date = `${entry.dateWeekday} ${entry.dateDay}${entry.dateOrdinal}`;
+    const friendlyURL = `${StringToUrl(entry.name)}-${entry.id}`;
     return (
       <ContentsItem
         key={entry.id}
         name={entry.name}
         date={date}
-        id={StringToUrl(entry.name)}
+        friendlyURL={friendlyURL}
       />
     );
   });
