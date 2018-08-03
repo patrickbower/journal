@@ -5,6 +5,7 @@ import ContentsContainer from "./containers/ContentsContainer";
 import ArticleContainer from "./containers/ArticleContainer";
 import LinkHome from "./components/LinkHome/LinkHome";
 import Header from "./components/Header/Header";
+import Loader from "./components/Loader/Loader";
 import "./styles/variables.css";
 import "./styles/reset.css";
 import "./styles/typography.css";
@@ -109,7 +110,7 @@ class App extends Component {
         </Router>
       );
     } else {
-      return <h1>Loading...</h1>;
+      return <Loader />;
     }
   }
 }

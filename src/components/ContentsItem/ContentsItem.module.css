@@ -4,3 +4,33 @@
   justify-content: space-between;
   width: 100%;
 }
+
+.name,
+.date {
+  background: var(--colour-stone);
+  padding: 0 10px;
+}
+
+.name {
+  margin-left: -10px;
+}
+
+.date {
+  display: none;
+  margin-right: -10px;
+}
+
+.link:hover .date {
+  display: block;
+}
+
+.date:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid var(--colour-gravel);
+  /* 1/2 line height */
+  margin-top: 0.75em;
+  z-index: -1;
+}
