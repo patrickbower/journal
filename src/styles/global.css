@@ -5,3 +5,11 @@ body {
 ul li {
   list-style: none;
 }
+
+::-moz-selection {
+  background: var(--colour-gravel);
+}
+
+::selection {
+  background: var(--colour-gravel);
+}
