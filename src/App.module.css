@@ -1,0 +1,31 @@
+.column {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-gap: 20px;
+  grid-template-areas: "header main nav";
+  margin: 30px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.nav {
+  grid-area: nav;
+  text-align: right;
+}
+
+@media only screen and (max-width: 760px) {
+  .column {
+    grid-template-areas:
+      "header nav"
+      "main main";
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    margin: 20px;
+  }
+}
