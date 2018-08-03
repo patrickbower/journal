@@ -1,3 +1,21 @@
+.main {
+  display: grid;
+}
+
+.article {
+  justify-self: center;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 760px) {
+  .article {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+
+/* markdown parsing  */
+
 .markdownBody {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
