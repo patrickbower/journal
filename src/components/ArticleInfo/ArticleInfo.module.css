@@ -2,3 +2,9 @@
   padding: 11px 0 200px;
   color: var(--colour-gravel);
 }
+
+@media only screen and (max-width: 760px) {
+  .infoText {
+    padding-bottom: 17px;
+  }
+}
