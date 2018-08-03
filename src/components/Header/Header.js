@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Brand from "../Brand/Brand";
 import style from "./Header.module.css";
 

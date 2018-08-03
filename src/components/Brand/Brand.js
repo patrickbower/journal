@@ -6,12 +6,9 @@ import style from "./Brand.module.css";
 const Brand = () => (
   <Link to="/">
     <Fragment>
-      <Logo
-        fill={"--colour-black"}
-        width={40}
-        height={40}
-        classname={style.logo}
-      />
+      <div className={style.logo}>
+        <Logo fill={"--colour-black"} width={40} height={40} />
+      </div>
       <h1 className={style.title}>Journal</h1>
     </Fragment>
   </Link>

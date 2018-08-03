@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Days, Months, Ordinal } from "./utils/time";
 import ContentsContainer from "./containers/ContentsContainer";

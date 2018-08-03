@@ -1,8 +1,9 @@
 .logo {
   display: inline-block;
-  margin: 0 10px -10px 0;
+  margin-right: 10px;
 }
 
 .title {
   display: inline-block;
+  transform: translateY(-10px);
 }
