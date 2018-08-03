@@ -6,12 +6,12 @@ import style from "./ContentsItem.module.css";
  * @function ContentsItem
  * @param {name} string - title
  */
-const ContentsItem = ({ name, date, id }) => (
+const ContentsItem = ({ name, date, friendlyURL }) => (
   <li>
     <Link
       to={{
         pathname: "/article",
-        hash: `#${id}`
+        hash: `#${friendlyURL}`
       }}
       className={style.link}
     >
