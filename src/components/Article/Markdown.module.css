@@ -32,6 +32,12 @@
   text-align: left;
 }
 
+.markdown code {
+  background-color: var(--colour-gravel);
+  padding: 0.25rem;
+  border-radius: 3px;
+}
+
 .markdown blockquote {
   margin: 0;
   border-left: 5px solid var(--colour-gravel);
