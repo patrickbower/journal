@@ -4,8 +4,8 @@
   --colour-black: #424242;
 
   --font-primary: "Graphik", "Arial";
-  --font-size-title: 1.999em;
-  --font-size-heading: 1.414em;
-  --font-size-body: 1.125em;
-  --font-size-small: 0.707em;
+  --font-size-title: 1.999rem;
+  --font-size-heading: 1.414rem;
+  --font-size-body: 1.125rem;
+  --font-size-small: 0.707rem;
 }

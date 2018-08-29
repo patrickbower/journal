@@ -1,3 +1,7 @@
+.markdown {
+  font-size: var(--font-size-body);
+}
+
 .markdown img,
 .markdown canvas,
 .markdown iframe,
@@ -30,6 +34,8 @@
   background-color: var(--colour-gravel);
   padding: 1rem;
   text-align: left;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
 }
 
 .markdown code {
@@ -50,6 +56,15 @@
 .markdown ol,
 .markdown li {
   text-align: left;
+}
+
+.markdown ul {
+  padding-bottom: 40px;
+}
+
+.markdown ul li {
+  padding-bottom: 10px;
+  list-style: disc outside;
 }
 
 .markdown h1,
